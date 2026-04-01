@@ -11,6 +11,8 @@ public class Main {
             System.out.print("Input 1 for converting to base-10."
                     + "\n"
                     + "Input 2 for converting from base-10."
+                    + "\n"
+                    + "Input 3 for Hex to base-10"
                     + "\n");
 
             int choice = Integer.parseInt(input.nextLine());
@@ -24,6 +26,7 @@ public class Main {
                     int baseValue = Integer.parseInt(input.nextLine());
                     BaseConverter bc = new BaseConverter(number, baseValue);
                     bc.convert(number, baseValue);
+                    break;
                 }
 
                 case 2: {
@@ -33,6 +36,15 @@ public class Main {
                     int baseValue = Integer.parseInt(input.nextLine());
                     DecimalToBase dbc = new DecimalToBase(number, baseValue);
                     dbc.convertToBaseN(number, baseValue);
+                    break;
+                }
+
+                case 3: {
+                    System.out.print("Enter a hexadecimal: ");
+                    String number = input.nextLine();
+                    HexToDecimal htd = new HexToDecimal(number);
+                    htd.convertHex(number);
+                    break;
                 }
             }
         }

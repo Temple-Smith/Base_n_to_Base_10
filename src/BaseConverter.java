@@ -25,9 +25,4 @@ public class BaseConverter {
         System.out.println(base10Value + " base 10.");
         return base10Value;
     }
-
-
-
-
-
 }
