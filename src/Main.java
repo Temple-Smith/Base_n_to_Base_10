@@ -13,6 +13,8 @@ public class Main {
                     + "Input 2 for converting from base-10."
                     + "\n"
                     + "Input 3 for Hex to base-10"
+                    + "\n"
+                    + "Input 4 for Decimal to Hex"
                     + "\n");
 
             int choice = Integer.parseInt(input.nextLine());
@@ -44,6 +46,14 @@ public class Main {
                     String number = input.nextLine();
                     HexToDecimal htd = new HexToDecimal(number);
                     htd.convertHex(number);
+                    break;
+                }
+
+                case 4: {
+                    System.out.print("Enter a number: ");
+                    String number = input.nextLine();
+                    DecimalToHex dth = new DecimalToHex(number);
+                    dth.hexToDeci(number);
                     break;
                 }
             }
